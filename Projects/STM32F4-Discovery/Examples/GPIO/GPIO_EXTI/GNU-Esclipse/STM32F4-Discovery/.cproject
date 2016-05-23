@@ -64,11 +64,11 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.251541726" name="Cross ARM GNU Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.1964008529" name="Use preprocessor" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.176450210" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Projects/STM32F4-Discovery/Examples/GPIO/GPIO_EXTI/Inc"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/STM32F4xx_HAL_Driver/Inc"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/BSP/STM32F4-Discovery"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../../../Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/STM32F4xx_HAL_Driver/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/BSP/STM32F4-Discovery"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="&quot;../Startup/system/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../Startup/system/include/cmsis&quot;"/>
 								</option>
@@ -83,16 +83,16 @@
 									<listOptionValue builtIn="false" value="STM32F407xx"/>
 									<listOptionValue builtIn="false" value="USE_STM32F4_DISCO"/>
 								</option>
-								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.flags.1365288142" name="Assembler flags" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.flags" valueType="stringList"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.flags.1365288142" name="Assembler flags" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.flags"/>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.807300573" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.17264031" name="Cross ARM C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.992675383" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Projects/STM32F4-Discovery/Examples/GPIO/GPIO_EXTI/Inc"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/STM32F4xx_HAL_Driver/Inc"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/BSP/STM32F4-Discovery"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../../../Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/STM32F4xx_HAL_Driver/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/BSP/STM32F4-Discovery"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="&quot;../Startup/system/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../Startup/system/include/cmsis&quot;"/>
 								</option>
@@ -114,11 +114,11 @@
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.696734846" name="Cross ARM C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1944535867" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Projects/STM32F4-Discovery/Examples/GPIO/GPIO_EXTI/Inc"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/STM32F4xx_HAL_Driver/Inc"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/BSP/STM32F4-Discovery"/>
-									<listOptionValue builtIn="false" value="D:/HocTap/STM32F4_Board/Software/STM32Cube_FW_F4_V1.11.0/Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../../../Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/STM32F4xx_HAL_Driver/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/BSP/STM32F4-Discovery"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="&quot;../Startup/system/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../Startup/system/include/cmsis&quot;"/>
 								</option>
@@ -174,8 +174,8 @@
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart.999061537" name="Do not use standard start files (-nostartfiles)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.usenewlibnano.376623172" name="Use newlib-nano (--specs=nano.specs)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.usenewlibnano" value="true" valueType="boolean"/>
-								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.libs.1621224047" name="Libraries (-l)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.libs" valueType="libs"/>
-								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.otherobjs.1351653583" name="Other objects" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.otherobjs" valueType="userObjs"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.libs.1621224047" name="Libraries (-l)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.libs"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.otherobjs.1351653583" name="Other objects" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.otherobjs"/>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.input.691780471" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
