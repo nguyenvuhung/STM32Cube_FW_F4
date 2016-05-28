@@ -93,6 +93,9 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
+    HAL_Delay(500);
+    BSP_LED_Toggle(LED3);
+    BSP_LED_Toggle(LED6);
   }
 }
 

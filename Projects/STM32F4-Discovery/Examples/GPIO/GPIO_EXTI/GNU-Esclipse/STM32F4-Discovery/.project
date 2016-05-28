@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>STM32F4-Discovery</name>
+	<name>GPIO_EXTI</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -57,6 +57,11 @@
 		</link>
 		<link>
 			<name>Drivers/STM32F4xx_HAL_Driver</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Example/GNU-Esclipse</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -141,6 +146,11 @@
 			<locationURI>copy_PARENT12/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c</locationURI>
 		</link>
 		<link>
+			<name>Example/GNU-Esclipse/startup_stm32f407xx.S</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/startup_stm32f407xx.S</locationURI>
+		</link>
+		<link>
 			<name>Example/User/main.c</name>
 			<type>1</type>
 			<locationURI>copy_PARENT1/Src/main.c</locationURI>
@@ -163,12 +173,8 @@
 	</linkedResources>
 	<variableList>
 		<variable>
-			<name>copy_PARENT</name>
-			<value>$%7BPARENT-2-PROJECT_LOC%7D/GNU-Esclipse</value>
-		</variable>
-		<variable>
 			<name>copy_PARENT1</name>
-			<value>$%7BPARENT-1-copy_PARENT%7D</value>
+			<value>$%7BPARENT-2-PROJECT_LOC%7D</value>
 		</variable>
 		<variable>
 			<name>copy_PARENT12</name>
