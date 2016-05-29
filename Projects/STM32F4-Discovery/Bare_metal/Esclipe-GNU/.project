@@ -148,7 +148,7 @@
 		<link>
 			<name>Example/GNU-Esclipse/startup_stm32f407xx.S</name>
 			<type>1</type>
-			<locationURI>copy_PARENT/startup_stm32f407xx.S</locationURI>
+			<locationURI>PROJECT_LOC/startup_stm32f407xx.S</locationURI>
 		</link>
 		<link>
 			<name>Example/User/main.c</name>
