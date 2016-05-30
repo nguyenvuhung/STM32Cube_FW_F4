@@ -38,6 +38,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "stdint.h"
 
 /** @addtogroup STM32F4xx_HAL_Examples
   * @{
@@ -82,7 +83,7 @@ int main(void)
   }
   
   /* Configure the system clock to 168 MHz */
-  SystemClock_Config();
+//  SystemClock_Config();
   
   /* Configure LED3 and LED4 */
   BSP_LED_Init(LED3);
