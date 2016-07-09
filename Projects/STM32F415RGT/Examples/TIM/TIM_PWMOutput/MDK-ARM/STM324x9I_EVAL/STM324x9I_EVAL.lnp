@@ -1,0 +1,28 @@
+--cpu Cortex-M4.fp
+"stm324x9i_eval\stmpe1600.o"
+"stm324x9i_eval\ts3510.o"
+"stm324x9i_eval\stmpe811.o"
+"stm324x9i_eval\stm324x9i_eval.o"
+"stm324x9i_eval\stm324x9i_eval_io.o"
+"stm324x9i_eval\stm32f4xx_hal_msp.o"
+"stm324x9i_eval\stm32f4xx_it.o"
+"stm324x9i_eval\main.o"
+"stm324x9i_eval\stm32f4xx_hal_sram.o"
+"stm324x9i_eval\stm32f4xx_hal_dma.o"
+"stm324x9i_eval\stm32f4xx_hal_dma_ex.o"
+"stm324x9i_eval\stm32f4xx_hal_pwr_ex.o"
+"stm324x9i_eval\stm32f4xx_hal_cortex.o"
+"stm324x9i_eval\stm32f4xx_hal_rcc.o"
+"stm324x9i_eval\stm32f4xx_hal.o"
+"stm324x9i_eval\stm32f4xx_hal_gpio.o"
+"stm324x9i_eval\stm32f4xx_hal_tim_ex.o"
+"stm324x9i_eval\stm32f4xx_hal_i2c.o"
+"stm324x9i_eval\stm32f4xx_ll_fmc.o"
+"stm324x9i_eval\stm32f4xx_hal_uart.o"
+"stm324x9i_eval\stm32f4xx_hal_tim.o"
+"stm324x9i_eval\system_stm32f4xx.o"
+"stm324x9i_eval\startup_stm32f429xx.o"
+--library_type=microlib --strict --scatter "STM324x9I_EVAL\STM324x9I_EVAL.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "STM324x9I_EVAL.map" -o STM324x9I_EVAL\STM324x9I_EVAL.axf
