@@ -61,7 +61,7 @@ __initialize_args(int* p_argc, char*** p_argv)
 // If you detect other functions to be needed, just let us know
 // and we'll add them.
 
-int
+__attribute__((weak)) int
 raise(int sig __attribute__((unused)))
 {
   errno = ENOSYS;
@@ -71,7 +71,7 @@ raise(int sig __attribute__((unused)))
 int
 kill(pid_t pid, int sig);
 
-int
+__attribute__((weak)) int
 kill(pid_t pid __attribute__((unused)), int sig __attribute__((unused)))
 {
   errno = ENOSYS;
@@ -571,7 +571,7 @@ newslot (void);
 register char* stack_ptr asm ("sp");
 
 /* following is copied from libc/stdio/local.h to check std streams */
-extern void _EXFUN(__sinit,(struct _reent*));
+extern void __sinit(struct _reent*);
 #define CHECK_INIT(ptr) \
   do                                            \
     {                                           \
