@@ -1,0 +1,9 @@
+/DebugConfig
+/RTE
+/STM32*
+*.o
+*.lst
+*.dump
+*.map
+*.HP
+
