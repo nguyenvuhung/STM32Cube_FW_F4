@@ -3,7 +3,7 @@
   * @file    GPIO/GPIO_EXTI/Inc/stm32f4xx_it.h 
   * @author  MCD Application Team
   * @version V1.2.5
-  * @date    29-January-2016
+  * @date    29-January-2016 
   * @brief   This file contains the headers of the interrupt handlers.
   ******************************************************************************
   * @attention

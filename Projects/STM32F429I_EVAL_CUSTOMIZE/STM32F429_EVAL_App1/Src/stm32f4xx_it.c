@@ -3,7 +3,7 @@
   * @file    GPIO/GPIO_EXTI/Src/stm32f4xx_it.c 
   * @author  MCD Application Team
   * @version V1.2.5
-  * @date    29-January-2016
+  * @date    29-January-2016 
   * @brief   Main Interrupt Service Routines.
   *          This file provides template for all exceptions handler and 
   *          peripherals interrupt service routine.
@@ -61,7 +61,7 @@
 /******************************************************************************/
 
 /**
-  * @brief   This function handles NMI exception.
+  * @brief  This function handles NMI exception.
   * @param  None
   * @retval None
   */

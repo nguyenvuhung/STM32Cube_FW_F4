@@ -3,7 +3,7 @@
   * @file    GPIO/GPIO_EXTI/Inc/main.h 
   * @author  MCD Application Team
   * @version V1.2.5
-  * @date    29-January-2016
+  * @date    29-January-2016 
   * @brief   Header for main.c module
   ******************************************************************************
   * @attention
@@ -41,7 +41,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
-#include "stm32f4_discovery.h"
+#include "stm32f429i_discovery.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/

@@ -3,7 +3,7 @@
   * @file    GPIO/GPIO_EXTI/Src/main.c 
   * @author  MCD Application Team
   * @version V1.2.5
-  * @date    29-January-2016
+  * @date    29-January-2016 
   * @brief   This example describes how to configure and use GPIOs through 
   *          the STM32F4xx HAL API.
   ******************************************************************************
@@ -65,8 +65,8 @@ static void EXTILine0_Config(void);
   */
 int main(void)
 {
- /* This sample code shows how to use STM32F4xx GPIO HAL API to toggle PD12, PD13,
-    PD14, and PD14 IOs (connected to LED4, LED3, LED5 and LED6 on STM32F401C-DISCO board (MB1115B)) 
+ /* This sample code shows how to use STM32F4xx GPIO HAL API to toggle PG13 
+     IOs (connected to LED3 on STM32F429i-Discovery board) 
     in an infinite loop.
     To proceed, 3 steps are required: */
 
@@ -77,15 +77,13 @@ int main(void)
        - Global MSP (MCU Support Package) initialization
      */
   HAL_Init();
- 
-  /* Configure LED3, LED4, LED5 and LED6 */
+
+  /* Configure LED3 and LED4 */
   BSP_LED_Init(LED3);
   BSP_LED_Init(LED4);
-  BSP_LED_Init(LED5);
-  BSP_LED_Init(LED6);
-
-  /* Configure the system clock to 168 MHz */
-//  SystemClock_Config();
+  
+  /* Configure the system clock to 180 MHz */
+  //SystemClock_Config();
   
   /* Configure EXTI Line0 (connected to PA0 pin) in interrupt mode */
   EXTILine0_Config();
@@ -93,9 +91,6 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
-    HAL_Delay(1000);
-    BSP_LED_Toggle(LED3);
-    BSP_LED_Toggle(LED6);
   }
 }
 
@@ -103,14 +98,14 @@ int main(void)
   * @brief  System Clock Configuration
   *         The system Clock is configured as follow : 
   *            System Clock source            = PLL (HSE)
-  *            SYSCLK(Hz)                     = 168000000
-  *            HCLK(Hz)                       = 168000000
+  *            SYSCLK(Hz)                     = 180000000
+  *            HCLK(Hz)                       = 180000000
   *            AHB Prescaler                  = 1
   *            APB1 Prescaler                 = 4
   *            APB2 Prescaler                 = 2
   *            HSE Frequency(Hz)              = 8000000
   *            PLL_M                          = 8
-  *            PLL_N                          = 336
+  *            PLL_N                          = 360
   *            PLL_P                          = 2
   *            PLL_Q                          = 7
   *            VDD(V)                         = 3.3
@@ -138,7 +133,7 @@ static void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 336;
+  RCC_OscInitStruct.PLL.PLLN = 360;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 7;
   if(HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
@@ -146,6 +141,9 @@ static void SystemClock_Config(void)
     Error_Handler();
   }
 
+  /* Activate the Over-Drive mode */
+  HAL_PWREx_EnableOverDrive();
+ 
   /* Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2 
      clocks dividers */
   RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
@@ -156,13 +154,6 @@ static void SystemClock_Config(void)
   if(HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
   {
     Error_Handler();
-  }
-
-  /* STM32F405x/407x/415x/417x Revision Z devices: prefetch is supported  */
-  if (HAL_GetREVID() == 0x1001)
-  {
-    /* Enable the Flash prefetch */
-    __HAL_FLASH_PREFETCH_BUFFER_ENABLE();
   }
 }
 
@@ -200,12 +191,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   {
     /* Toggle LED3 */
     BSP_LED_Toggle(LED3);
-    /* Toggle LED4 */
-    BSP_LED_Toggle(LED4);    
-    /* Toggle LED5 */
-    BSP_LED_Toggle(LED5);   
-    /* Toggle LED6 */
-    BSP_LED_Toggle(LED6);
   }
 }
 
@@ -216,15 +201,14 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   */
 static void Error_Handler(void)
 {
-  /* Turn LED5 on */
-  BSP_LED_On(LED5);
+  /* Turn LED4 on */
+  BSP_LED_On(LED4);
   while(1)
   {
   }
 }
 
 #ifdef  USE_FULL_ASSERT
-
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.
