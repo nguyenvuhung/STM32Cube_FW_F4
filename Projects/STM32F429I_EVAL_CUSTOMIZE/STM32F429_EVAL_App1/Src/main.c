@@ -52,12 +52,11 @@
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-static void SystemClock_Config(void);
-static void Error_Handler(void);
+//static void SystemClock_Config(void);
+//static void Error_Handler(void);
 static void EXTILine0_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
-
 /**
   * @brief  Main program
   * @param  None
@@ -87,14 +86,12 @@ int main(void)
   
   /* Configure EXTI Line0 (connected to PA0 pin) in interrupt mode */
   EXTILine0_Config();
-  
-  trace_printf("Hello World\n");
 
   /* Infinite loop */
   while (1)
   {
 	  BSP_LED_Toggle(LED1);
-	  trace_printf("Hello World\n");
+	  printf("Hello World\n");
 	  HAL_Delay(1000);
   }
 }
