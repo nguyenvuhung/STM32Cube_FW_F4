@@ -283,10 +283,10 @@ void BSP_LED_Toggle(Led_TypeDef Led)
 void BSP_PB_Init(Button_TypeDef Button, ButtonMode_TypeDef Button_Mode)
 {
   GPIO_InitTypeDef GPIO_InitStruct;
-  
+
   /* Enable the BUTTON clock */
   BUTTONx_GPIO_CLK_ENABLE(Button);
-  
+
   if(Button_Mode == BUTTON_MODE_GPIO)
   {
     /* Configure Button pin as input */
@@ -296,25 +296,25 @@ void BSP_PB_Init(Button_TypeDef Button, ButtonMode_TypeDef Button_Mode)
     GPIO_InitStruct.Speed = GPIO_SPEED_FAST;
     HAL_GPIO_Init(BUTTON_PORT[Button], &GPIO_InitStruct);
   }
-  
+
   if(Button_Mode == BUTTON_MODE_EXTI)
   {
     /* Configure Button pin as input with External interrupt */
     GPIO_InitStruct.Pin = BUTTON_PIN[Button];
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FAST;
-    
+
     if(Button != BUTTON_WAKEUP)
     {
-      GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING; 
+      GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
     }
     else
     {
       GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
     }
-    
+
     HAL_GPIO_Init(BUTTON_PORT[Button], &GPIO_InitStruct);
-    
+
     /* Enable and set Button EXTI Interrupt to the lowest priority */
     HAL_NVIC_SetPriority((IRQn_Type)(BUTTON_IRQn[Button]), 0x0F, 0x00);
     HAL_NVIC_EnableIRQ((IRQn_Type)(BUTTON_IRQn[Button]));
@@ -510,7 +510,7 @@ static void I2Cx_Init(void)
   if(HAL_I2C_GetState(&heval_I2c) == HAL_I2C_STATE_RESET)
   {
     heval_I2c.Instance = I2C1;
-    heval_I2c.Init.ClockSpeed      = I2C_SPEED;
+    heval_I2c.Init.ClockSpeed      = BSP_I2C_SPEED;
     heval_I2c.Init.DutyCycle       = I2C_DUTYCYCLE_2;
     heval_I2c.Init.OwnAddress1     = 0;
     heval_I2c.Init.AddressingMode  = I2C_ADDRESSINGMODE_7BIT;

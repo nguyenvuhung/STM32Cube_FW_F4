@@ -172,7 +172,7 @@ void SysTick_Handler(void)
   */
 void EXTI0_IRQHandler(void)
 {
-  HAL_GPIO_EXTI_IRQHandler(KEY_BUTTON_PIN);
+  HAL_GPIO_EXTI_IRQHandler(WAKEUP_BUTTON_PIN);
 }
 
 /**

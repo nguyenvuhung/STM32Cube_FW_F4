@@ -66,6 +66,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>STM32F429_EVAL_App1/Inc</name>
+			<type>2</type>
+			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Projects/STM32F429I_EVAL_CUSTOMIZE/STM32F429_EVAL_App1/Inc</location>
+		</link>
+		<link>
 			<name>STM32F429_EVAL_App1/User</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -79,6 +84,11 @@
 			<name>Drivers/CMSIS/system_stm32f4xx.c</name>
 			<type>1</type>
 			<locationURI>copy_PARENT1/Src/system_stm32f4xx.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/STM32F4xx_HAL_Driver/Inc</name>
+			<type>2</type>
+			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/STM32F4xx_HAL_Driver/Inc</location>
 		</link>
 		<link>
 			<name>Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal.c</name>
@@ -146,6 +156,11 @@
 			<locationURI>copy_PARENT12/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c</locationURI>
 		</link>
 		<link>
+			<name>Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_uart.c</name>
+			<type>1</type>
+			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</location>
+		</link>
+		<link>
 			<name>STM32F429_EVAL_App1/GNU-Esclipse/Startup</name>
 			<type>2</type>
 			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Projects/STM32F429I_EVAL_CUSTOMIZE/STM32F429_EVAL_App1/Esclipe-GNU/Startup</location>
@@ -161,14 +176,14 @@
 			<locationURI>copy_PARENT1/Src/stm32f4xx_it.c</locationURI>
 		</link>
 		<link>
-			<name>Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm32f429i_discovery.c</name>
+			<name>Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval.c</name>
 			<type>1</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.c</location>
+			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval.c</location>
 		</link>
 		<link>
-			<name>Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm32f429i_discovery.h</name>
+			<name>Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval.h</name>
 			<type>1</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.h</location>
+			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval.h</location>
 		</link>
 	</linkedResources>
 	<variableList>
