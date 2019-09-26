@@ -316,6 +316,86 @@ typedef enum
 #define EVAL_I2Cx_EV_IRQn                     I2C1_EV_IRQn
 #define EVAL_I2Cx_ER_IRQn                     I2C1_ER_IRQn
 
+//Touch Screen PIN---------------------------------------
+//////////////////////////////////TOUCH PANEL PIN////////////////////////////////////////////
+//Ӳ����ص��Ӻ���
+
+#define	CHX 	0x90 	//ͨ��Y+��ѡ�������	
+#define	CHY 	0xD0	//ͨ��X+��ѡ������� 
+
+#define PIN_TP_DCLK 	13		//SCK	O
+#define PORT_TP_DCLK 	GPIOB
+#define PIN_TP_CS 		5		//NSS	O
+#define PORT_TP_CS 		GPIOB
+#define PIN_TP_DIN 		15		//MOSI	O
+#define PORT_TP_DIN 	GPIOB
+#define PIN_TP_DOUT 	2		//MISO	I
+#define PORT_TP_DOUT 	GPIOC
+#define PIN_TP_INT		14		//IRQ	I
+#define PORT_TP_INT		GPIOB
+#define PIN_TP_BUSY		12		//BUSY	I
+#define PORT_TP_BUSY	GPIOB
+
+#define TP_DCLK(a)	\
+						if (!a)	\
+						PORT_TP_DCLK->BSRR |= 1UL << PIN_TP_DCLK;	\
+						else		\
+						PORT_TP_DCLK->BSRR &= ~(1UL << PIN_TP_DCLK)
+#define TP_CS(a)	\
+						if (!a)	\
+						PORT_TP_CS->BSRR |= 1UL << PIN_TP_CS;	\
+						else		\
+						PORT_TP_CS->BSRR &= ~(1UL << PIN_TP_CS)
+#define TP_DIN(a)	\
+						if (!a)	\
+						PORT_TP_DIN->BSRR |= 1UL << PIN_TP_DIN;	\
+						else		\
+						PORT_TP_DIN->BSRR &= ~(1UL << PIN_TP_DIN)
+													
+#define TP_DOUT		(PORT_TP_DOUT->IDR & (1UL << PIN_TP_DOUT)) >> PIN_TP_DOUT
+#define TP_BUSY		(PORT_TP_BUSY->IDR & (1UL << PIN_TP_BUSY)) >> PIN_TP_BUSY
+#define TP_INT_IN   (PORT_TP_INT->IDR & (1UL << PIN_TP_INT)) >> PIN_TP_INT
+						
+						
+/*****************************ADS7846 SPI2********************************************/
+/* Definition for SPIx clock resources */	
+#define SPIx                             SPI2
+#define SPIx_CLK_ENABLE()                __SPI2_CLK_ENABLE()
+#define SPIx_SCK_GPIO_CLK_ENABLE()       __GPIOB_CLK_ENABLE()
+#define SPIx_MISO_GPIO_CLK_ENABLE()      __GPIOC_CLK_ENABLE() 
+#define SPIx_MOSI_GPIO_CLK_ENABLE()      __GPIOB_CLK_ENABLE() 
+
+#define SPIx_FORCE_RESET()               __SPI2_FORCE_RESET()
+#define SPIx_RELEASE_RESET()             __SPI2_RELEASE_RESET()			
+
+/* Definition for SPIx Pins */
+#define TP_SPIx_SCK_PIN                  GPIO_PIN_13
+#define TP_SPIx_SCK_GPIO_PORT            GPIOB
+#define SPIx_SCK_AF                      GPIO_AF5_SPI2
+#define TP_SPIx_MISO_PIN                 GPIO_PIN_2
+#define TP_SPIx_MISO_GPIO_PORT           GPIOC
+#define SPIx_MISO_AF                     GPIO_AF5_SPI2
+#define TP_SPIx_MOSI_PIN                 GPIO_PIN_15
+#define TP_SPIx_MOSI_GPIO_PORT           GPIOB
+#define SPIx_MOSI_AF                     GPIO_AF5_SPI2
+
+/*Definition GPIO */
+#define TP_CS_PIN												 GPIO_PIN_5
+#define TP_CS_CLK_ENABLE()							 __GPIOB_CLK_ENABLE()	
+#define TP_CS_PORT											 GPIOB		
+
+#define TP_BUSY_PIN											 GPIO_PIN_12	
+#define TP_BUSY_CLK_ENABLE()						 __GPIOB_CLK_ENABLE()							
+#define TP_BUSY_PORT										 GPIOB
+
+#define TP_IRQ_PIN											GPIO_PIN_14
+#define TP_IRQ_CLK_ENABLE()							__GPIOB_CLK_ENABLE()
+#define TP_IRQ_PORT											GPIOB
+#define TP_IRQn													EXTI15_10_IRQn
+
+/* Definition for SPIx's NVIC */
+#define SPIx_IRQn                        SPI2_IRQn
+#define SPIx_IRQHandler                  SPI2_IRQHandler						
 /**
   * @}
   */ 

@@ -372,6 +372,13 @@ SECTIONS
         . = . + _Minimum_Stack_Size ;
     } >RAM
     
+    /*  SDRAM */ 
+    
+    .GUISection : ALIGN(4)
+    {
+        *(.GUISection)
+    } >SDRAM
+    
     /*
      * The FLASH Bank1.
      * The C or assembly source must explicitly place the code 

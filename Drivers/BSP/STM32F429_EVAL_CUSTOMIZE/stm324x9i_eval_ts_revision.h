@@ -45,7 +45,7 @@
 #endif   
    
 /* Includes ------------------------------------------------------------------*/
-#include "stm324x9i_eval_revision.h"  
+#include "stm324x9i_eval.h"
 #include "..\Components\ts7846\ts7846.h" 
 
 /** @addtogroup BSP
