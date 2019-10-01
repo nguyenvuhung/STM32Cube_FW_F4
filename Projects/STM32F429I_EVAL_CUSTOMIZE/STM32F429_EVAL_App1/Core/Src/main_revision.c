@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    main.c 
+  * @file    main.c
   * @author  MCD Application Team
   * @version V1.1.0
   * @date    26-June-2014
@@ -16,8 +16,8 @@
   *
   *        http://www.st.com/software_license_agreement_liberty_v2
   *
-  * Unless required by applicable law or agreed to in writing, software 
-  * distributed under the License is distributed on an "AS IS" BASIS, 
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   * See the License for the specific language governing permissions and
   * limitations under the License.
@@ -42,29 +42,29 @@
 /** @defgroup MAIN
 * @brief main file
 * @{
-*/ 
+*/
 
 /** @defgroup MAIN_Private_TypesDefinitions
 * @{
-*/ 
+*/
 /**
 * @}
-*/ 
+*/
 
 /** @defgroup MAIN_Private_Defines
 * @{
-*/ 
+*/
 /**
 * @}
-*/ 
+*/
 
 
 /** @defgroup MAIN_Private_Macros
 * @{
-*/ 
+*/
 /**
 * @}
-*/ 
+*/
 
 
 /** @defgroup MAIN_Private_Variables
@@ -72,12 +72,12 @@
 */
 /**
 * @}
-*/ 
+*/
 
 
 /** @defgroup MAIN_Private_FunctionPrototypes
 * @{
-*/ 
+*/
 static void SystemClock_Config(void);
 static void StartThread(void const * argument);
 static void GUIThread(void const * argument);
@@ -94,11 +94,11 @@ extern K_ModuleItem_Typedef  file_browser;
 
 /**
 * @}
-*/ 
+*/
 
 /** @defgroup MAIN_Private_Functions
 * @{
-*/ 
+*/
 
 
 /**
@@ -115,18 +115,18 @@ int main(void)
        - Global MSP (MCU Support Package) initialization
   */
   HAL_Init();
- 
-  /* Configure the system clock @ 168 Mhz */
+
+  /* Configure the system clock @ 180 Mhz */
   SystemClock_Config();
 	printf("Hello\n");
-  
+
 	  /* Compute the Timer period to generate a signal frequency at 10Khz */
   uwPeriod = (SystemCoreClock / 10000 ) - 1;
-	
+
   /* Create Start task */
   osThreadDef(Kernel_Thread, StartThread, osPriorityNormal, 0, 2 * configMINIMAL_STACK_SIZE);
   osThreadCreate (osThread(Kernel_Thread), NULL);
-  
+
   /* Start scheduler */
   osKernelStart();
 
@@ -146,16 +146,16 @@ static void StartThread(void const * argument)
   uint32_t FLatency;
   SystemSettingsTypeDef settings;
   osTimerId lcd_timer;
-	osTimerId Brightness_timer;
-       
-	printf("Start StartThread\n");
+  osTimerId Brightness_timer;
+
+  printf("Start StartThread\n");
   /* Initialize Joystick, Touch screen and Leds */
   k_BspInit();
   k_LogInit();
-  
+
   /* Initialize GUI */
   GUI_Init();
-		  // Use memory devices for all windows
+  // Use memory devices for all windows
   //
   #if GUI_SUPPORT_MEMDEV
     WM_SetCreateFlags(WM_CF_MEMDEV);
@@ -163,14 +163,14 @@ static void StartThread(void const * argument)
   #endif
 //  WM_MULTIBUF_Enable(1);
 //  GUI_SelectLayer(1);
-	
-  
+
+
   /* Initialize RTC */
   k_CalendarBkupInit();
-  
+
   /* Get General settings */
   settings.d32 = k_BkupRestoreParameter(CALIBRATION_GENERAL_SETTINGS_BKP);
-    
+
   if(settings.b.use_180Mhz)
   {
     HAL_RCC_GetClockConfig(&RCC_ClkInitStruct, &FLatency);
@@ -179,44 +179,44 @@ static void StartThread(void const * argument)
     RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
     HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1);
 
-    HAL_RCC_GetOscConfig(&RCC_OscInitStruct);  
+    HAL_RCC_GetOscConfig(&RCC_OscInitStruct);
     RCC_OscInitStruct.PLL.PLLM = 25;
     RCC_OscInitStruct.PLL.PLLN = 360;
     RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
     RCC_OscInitStruct.PLL.PLLQ = 7;
     HAL_RCC_OscConfig(&RCC_OscInitStruct);
-    
+
     HAL_PWREx_ActivateOverDrive();
-    
+
     /* Select PLL as system clock source */
     RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK);
     RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
     HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5);
   }
-  
+
   k_StartUp();
-  
+
   /* Initialize Storage Units */
   k_StorageInit();
-  
+
   /*Initialize memory pools */
   k_MemInit();
-  
+
   /* Add Modules*/
   k_ModuleInit();
-  
-  k_ModuleAdd(&image_browser);  
-  k_ModuleOpenLink(&image_browser, "jpg"); 
+
+  k_ModuleAdd(&image_browser);
+  k_ModuleOpenLink(&image_browser, "jpg");
   k_ModuleOpenLink(&image_browser, "JPG");
-  k_ModuleOpenLink(&image_browser, "bmp"); 
+  k_ModuleOpenLink(&image_browser, "bmp");
   k_ModuleOpenLink(&image_browser, "BMP");
-    
+
   k_ModuleAdd(&system_info);
-  k_ModuleAdd(&file_browser);   
-    
+  k_ModuleAdd(&file_browser);
+
   /* Create GUI task */
   osThreadDef(GUI_Thread, GUIThread, osPriorityHigh, 0, 30 * configMINIMAL_STACK_SIZE);
-  osThreadCreate (osThread(GUI_Thread), NULL); 
+  osThreadCreate (osThread(GUI_Thread), NULL);
 
   /* Create Touch screen Timer */
   osTimerDef(TS_Timer, TimerCallback);
@@ -224,19 +224,19 @@ static void StartThread(void const * argument)
 
   /* Start the TS Timer */
   osTimerStart(lcd_timer, 100);
-	
-	
+
+
   /* Create PWM  Timer */
 //  osTimerDef(PWM_Timer, BrightnessCallback);
 //  Brightness_timer =  osTimerCreate(osTimer(PWM_Timer), osTimerPeriodic, (void *)0);
 //  /* Start the PWM Timer */
 //  osTimerStart(Brightness_timer, 100);
-  
+
   for( ;; )
   {
     /* Toggle LED1 .. LED4 */
 		BSP_LED_Toggle(LED1);
-		BSP_LED_Toggle(LED2); 	
+		BSP_LED_Toggle(LED2);
 		printf("Toggle LED1, LED2\n");
     osDelay(250);
 	}
@@ -252,44 +252,44 @@ static void GUIThread(void const * argument)
 	printf("Start GUIThread\n");
   /* Set General Graphical properties */
   k_SetGuiProfile();
-    
+
   if(k_CalibrationIsDone() == 0)
   {
  //   GUI_SelectLayer(1);
     k_CalibrationInit();
  //   GUI_SelectLayer(0);
   }
-  
+
   /* Show the main menu */
   k_InitMenu();
-  
+
   /* Gui background Task */
   while(1)
   {
-    GUI_Exec();       
-    osDelay(30); 
+    GUI_Exec();
+    osDelay(30);
   }
 }
 
 /**
   * @brief  Brightness callbacsk (40 ms)
-  * @param  n: Timer index 
+  * @param  n: Timer index
   * @retval None
   */
 
 static void BrightnessCallback(void const *n)
-{  
+{
   printf("Start BrightnessCallback\n");
   LCD_Brightness(Duty);
 }
 
 /**
   * @brief  Timer callbacsk (40 ms)
-  * @param  n: Timer index 
+  * @param  n: Timer index
   * @retval None
   */
 static void TimerCallback(void const *n)
-{  
+{
   printf("Start TimerCallback\n");
   k_TouchUpdate();
 }
@@ -302,16 +302,16 @@ static void TimerCallback(void const *n)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
     if(GPIO_Pin == GPIO_PIN_8)
-  {   
+  {
     if (SD_DETECT_PIN)
     {
       BSP_SD_DetectIT();
-    } 
+    }
   }
 }*/
 /**
   * @brief  System Clock Configuration
-  *         The system Clock is configured as follow : 
+  *         The system Clock is configured as follow :
   *            System Clock source            = PLL (HSE)
   *            SYSCLK(Hz)                     = 180000000
   *            HCLK(Hz)                       = 180000000
@@ -338,7 +338,7 @@ static void SystemClock_Config(void)
   __PWR_CLK_ENABLE();
 
   /* The voltage scaling allows optimizing the power consumption when the device is 
-     clocked below the maximum system frequency, to update the voltage scaling value 
+     clocked below the maximum system frequency, to update the voltage scaling value
      regarding system frequency refer to product datasheet.  */
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
@@ -355,14 +355,14 @@ static void SystemClock_Config(void)
 
   /* Activate the Over-Drive mode */
   HAL_PWREx_ActivateOverDrive();
-			
+
   /* Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2 
      clocks dividers */
   RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;  
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;  
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
   HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5);
 }
 
@@ -378,9 +378,9 @@ static void SystemClock_Config(void)
 void assert_failed(uint8_t* file, uint32_t line)
 {
   /* User can add his own implementation to report the file name and line
-  number,ex: printf("Wrong parameters value: file %s on line %d\r\n", 
+  number,ex: printf("Wrong parameters value: file %s on line %d\r\n",
   file, line) */
-  
+
   /* Infinite loop */
   while (1)
   {}
@@ -391,14 +391,14 @@ void assert_failed(uint8_t* file, uint32_t line)
 
 /**
 * @}
-*/ 
+*/
 
 /**
 * @}
-*/ 
+*/
 
 /**
 * @}
-*/ 
+*/
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

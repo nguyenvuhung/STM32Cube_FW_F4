@@ -31,9 +31,9 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>Doc</name>
+			<name>Docs</name>
 			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
+			<locationURI>copy_PARENT1/Docs</locationURI>
 		</link>
 		<link>
 			<name>Drivers</name>
@@ -64,11 +64,6 @@
 			<name>Application/Modules</name>
 			<type>2</type>
 			<locationURI>copy_PARENT1/Modules</locationURI>
-		</link>
-		<link>
-			<name>Doc/readme.txt</name>
-			<type>1</type>
-			<locationURI>copy_PARENT1/readme.txt</locationURI>
 		</link>
 		<link>
 			<name>Drivers/BSP</name>
