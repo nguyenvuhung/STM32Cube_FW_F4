@@ -374,9 +374,9 @@ SECTIONS
     
     /*  SDRAM */ 
     
-    .GUISection : ALIGN(4)
+    .GUISection 0xC0A00000: ALIGN(4)
     {
-        *(.GUISection)
+      KEEP(*(.GUISection))
     } >SDRAM
     
     /*

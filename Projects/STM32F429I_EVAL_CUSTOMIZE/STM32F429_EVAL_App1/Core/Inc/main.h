@@ -59,6 +59,9 @@
 #include "Image_VN.h"
 #include "Font_VN.h"
 #include "Language.h"
+
+ /* FreeRTOS include files */
+#include "cmsis_os.h"
 /* Exported types ------------------------------------------------------------*/
 typedef union
 {

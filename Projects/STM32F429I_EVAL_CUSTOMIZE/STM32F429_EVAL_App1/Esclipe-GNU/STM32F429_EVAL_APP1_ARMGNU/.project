@@ -26,6 +26,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>Application</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>Doc</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -41,9 +46,24 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>STM32F429_EVAL_App1</name>
+			<name>Application/Core</name>
+			<type>2</type>
+			<locationURI>copy_PARENT1/Core</locationURI>
+		</link>
+		<link>
+			<name>Application/Data</name>
+			<type>2</type>
+			<locationURI>copy_PARENT1/Data</locationURI>
+		</link>
+		<link>
+			<name>Application/GNU-Esclipse</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Application/Modules</name>
+			<type>2</type>
+			<locationURI>copy_PARENT1/Modules</locationURI>
 		</link>
 		<link>
 			<name>Doc/readme.txt</name>
@@ -81,49 +101,34 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>STM32F429_EVAL_App1/Core</name>
-			<type>2</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Projects/STM32F429I_EVAL_CUSTOMIZE/STM32F429_EVAL_App1/Core</location>
-		</link>
-		<link>
-			<name>STM32F429_EVAL_App1/Data</name>
-			<type>2</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Projects/STM32F429I_EVAL_CUSTOMIZE/STM32F429_EVAL_App1/Data</location>
-		</link>
-		<link>
-			<name>STM32F429_EVAL_App1/GNU-Esclipse</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>STM32F429_EVAL_App1/Modules</name>
-			<type>2</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Projects/STM32F429I_EVAL_CUSTOMIZE/STM32F429_EVAL_App1/Modules</location>
-		</link>
-		<link>
 			<name>Utilities/CPU</name>
 			<type>2</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Utilities/CPU</location>
+			<locationURI>copy_PARENT12/Utilities/CPU</locationURI>
+		</link>
+		<link>
+			<name>Application/GNU-Esclipse/Startup</name>
+			<type>2</type>
+			<locationURI>copy_PARENT/Startup</locationURI>
 		</link>
 		<link>
 			<name>Drivers/BSP/Component</name>
 			<type>2</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/BSP/Components/ts7846</location>
+			<locationURI>copy_PARENT12/Drivers/BSP/Components/ts7846</locationURI>
 		</link>
 		<link>
 			<name>Drivers/BSP/STM32F429_EVAL_CUSTOMIZE</name>
 			<type>2</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/BSP/STM32F429_EVAL_CUSTOMIZE</location>
+			<locationURI>copy_PARENT12/Drivers/BSP/STM32F429_EVAL_CUSTOMIZE</locationURI>
 		</link>
 		<link>
 			<name>Drivers/STM32F4xx_HAL_Driver/Inc</name>
 			<type>2</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/STM32F4xx_HAL_Driver/Inc</location>
+			<locationURI>copy_PARENT12/Drivers/STM32F4xx_HAL_Driver/Inc</locationURI>
 		</link>
 		<link>
 			<name>Drivers/STM32F4xx_HAL_Driver/Src</name>
 			<type>2</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Drivers/STM32F4xx_HAL_Driver/Src</location>
+			<locationURI>copy_PARENT12/Drivers/STM32F4xx_HAL_Driver/Src</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FatFs/Core</name>
@@ -136,6 +141,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>Middlewares/FreeRTOS/Config</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>Middlewares/FreeRTOS/Portable</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -143,27 +153,27 @@
 		<link>
 			<name>Middlewares/FreeRTOS/croutine.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/Third_Party/FreeRTOS/Source/croutine.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FreeRTOS/Source/croutine.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/list.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/Third_Party/FreeRTOS/Source/list.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FreeRTOS/Source/list.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/queue.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/Third_Party/FreeRTOS/Source/queue.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FreeRTOS/Source/queue.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/tasks.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/Third_Party/FreeRTOS/Source/tasks.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FreeRTOS/Source/tasks.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/timers.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/Third_Party/FreeRTOS/Source/timers.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FreeRTOS/Source/timers.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/STemWin/Config</name>
@@ -181,69 +191,69 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>STM32F429_EVAL_App1/GNU-Esclipse/Startup</name>
-			<type>2</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Projects/STM32F429I_EVAL_CUSTOMIZE/STM32F429_EVAL_App1/Esclipe-GNU/Startup</location>
-		</link>
-		<link>
 			<name>Middlewares/FatFs/Core/diskio.c</name>
 			<type>1</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Middlewares/Third_Party/FatFs/src/diskio.c</location>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FatFs/src/diskio.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FatFs/Core/ff.c</name>
 			<type>1</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Middlewares/Third_Party/FatFs/src/ff.c</location>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FatFs/src/ff.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FatFs/Core/ff_gen_drv.c</name>
 			<type>1</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c</location>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FatFs/Options/syscall.c</name>
 			<type>1</type>
-			<location>E:/GoogleDrive/eclipse-workspace/STM32Cube_FW_F4/Middlewares/Third_Party/FatFs/src/option/syscall.c</location>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FatFs/src/option/syscall.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FatFs/Options/unicode.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/Third_Party/FatFs/src/option/unicode.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FatFs/src/option/unicode.c</locationURI>
+		</link>
+		<link>
+			<name>Middlewares/FreeRTOS/Config/FreeRTOSConfig.h</name>
+			<type>1</type>
+			<locationURI>copy_PARENT1/Config/FreeRTOSConfig.h</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/Portable/cmsis_os.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/Portable/heap_4.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/FreeRTOS/Portable/port.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/STemWin/Config/GUIConf_revision.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Config/GUIConf_revision.c</locationURI>
+			<locationURI>copy_PARENT1/Config/GUIConf_revision.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/STemWin/Config/LCDConf_800_480.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/Config/LCDConf_800_480.c</locationURI>
+			<locationURI>copy_PARENT1/Config/LCDConf_800_480.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/STemWin/Library/STemWin528_CM4_OS_GCC.a</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/ST/STemWin/Lib/STemWin528_CM4_OS_GCC.a</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/ST/STemWin/Lib/STemWin528_CM4_OS_GCC.a</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/STemWin/OS/GUI_X_OS.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Middlewares/ST/STemWin/OS/GUI_X_OS.c</locationURI>
+			<locationURI>copy_PARENT12/Middlewares/ST/STemWin/OS/GUI_X_OS.c</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>

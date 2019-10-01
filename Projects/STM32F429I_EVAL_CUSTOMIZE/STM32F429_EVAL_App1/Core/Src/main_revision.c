@@ -85,7 +85,7 @@ static void TimerCallback(void const *n);
 static void BrightnessCallback(void const *n);
 
 /*Value Brightness LCD*/
-uint8_t Duty=10;
+static uint8_t Duty=10;
 uint32_t uwPeriod=0;
 
 extern K_ModuleItem_Typedef  system_info;
@@ -114,10 +114,10 @@ int main(void)
        - Set NVIC Group Priority to 4
        - Global MSP (MCU Support Package) initialization
   */
-//  HAL_Init();
+  HAL_Init();
  
   /* Configure the system clock @ 168 Mhz */
-//  SystemClock_Config();
+  SystemClock_Config();
 	printf("Hello\n");
   
 	  /* Compute the Timer period to generate a signal frequency at 10Khz */
@@ -161,8 +161,8 @@ static void StartThread(void const * argument)
     WM_SetCreateFlags(WM_CF_MEMDEV);
     WM_EnableMemdev(WM_HBKWIN);
   #endif
- // WM_MULTIBUF_Enable(1);
- // GUI_SelectLayer(1);
+//  WM_MULTIBUF_Enable(1);
+//  GUI_SelectLayer(1);
 	
   
   /* Initialize RTC */
@@ -227,20 +227,17 @@ static void StartThread(void const * argument)
 	
 	
   /* Create PWM  Timer */
-	/*
-  osTimerDef(PWM_Timer, BrightnessCallback);
-  Brightness_timer =  osTimerCreate(osTimer(PWM_Timer), osTimerPeriodic, (void *)0);
-*/
-  /* Start the PWM Timer */
-	/*
-  osTimerStart(Brightness_timer, 100);
-	*/
+//  osTimerDef(PWM_Timer, BrightnessCallback);
+//  Brightness_timer =  osTimerCreate(osTimer(PWM_Timer), osTimerPeriodic, (void *)0);
+//  /* Start the PWM Timer */
+//  osTimerStart(Brightness_timer, 100);
   
   for( ;; )
   {
     /* Toggle LED1 .. LED4 */
 		BSP_LED_Toggle(LED1);
 		BSP_LED_Toggle(LED2); 	
+		printf("Toggle LED1, LED2\n");
     osDelay(250);
 	}
 }
@@ -253,7 +250,7 @@ static void StartThread(void const * argument)
 static void GUIThread(void const * argument)
 {
 	printf("Start GUIThread\n");
-  /* Set General Graphical proprieties */
+  /* Set General Graphical properties */
   k_SetGuiProfile();
     
   if(k_CalibrationIsDone() == 0)
@@ -282,6 +279,7 @@ static void GUIThread(void const * argument)
 
 static void BrightnessCallback(void const *n)
 {  
+  printf("Start BrightnessCallback\n");
   LCD_Brightness(Duty);
 }
 

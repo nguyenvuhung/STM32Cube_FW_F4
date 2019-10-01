@@ -68,8 +68,8 @@ Purpose     : Display controller initialization
 
 
 /*----------------------------------------------------------*/
-#define GUI_NUMBYTES  128 * 1024
-#define SDRAM_ADDRESS 0xC00A0000
+#define GUI_NUMBYTES  (2 * 1024 * 1024)
+#define SDRAM_ADDRESS 0xC0A00000
 
 //#pragma location=0xC0000000
 
