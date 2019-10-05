@@ -14,18 +14,18 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411" name="Debug" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" postbuildStep="">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411" name="Debug" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" postbuildStep="arm-none-eabi-objcopy -O binary ${ProjName}.elf ${ProjName}.bin">
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411." name="/" resourcePath="">
 						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug.816245357" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug">
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.25576042" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.most" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.25576042" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.debug" valueType="enumerated"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.617786779" name="Message length (-fmessage-length=0)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.1620667992" name="'char' is signed (-fsigned-char)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1102145866" name="Function sections (-ffunction-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.1999122957" name="Data sections (-fdata-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.2127396541" name="Debug level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.default" valueType="enumerated"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.1295879580" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.default" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.1295879580" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format" useByScannerDiscovery="true"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.2093938158" name="ARM family" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m4" valueType="enumerated"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.92749009" name="Float ABI" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.hard" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.92749009" name="Float ABI" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.soft" valueType="enumerated"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.440405203" name="Enable all common warnings (-Wall)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.extrawarn.1657401962" name="Enable extra warnings (-Wextra)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.extrawarn" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.unused.531915043" name="Warn on various unused elements (-Wunused)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.unused" useByScannerDiscovery="true" value="true" valueType="boolean"/>
@@ -54,11 +54,10 @@
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.661391543" name="Remove command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm" useByScannerDiscovery="false" value="rm" valueType="string"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1187417251" name="Create flash image" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.948969159" name="Print size" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.788419085" name="FPU Type" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.fpv4spd16" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.788419085" name="FPU Type" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.default" valueType="enumerated"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id.1087638036" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id" useByScannerDiscovery="false" value="1287942917" valueType="string"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.architecture.238912156" name="Architecture" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.architecture" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.arch.none" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.39382084" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
-							<builder buildPath="${workspace_loc:/${ProjName}/Debug}" enableAutoBuild="false" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1379262985" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder">
+							<builder buildPath="${workspace_loc:/STM32F4xx_blink}/Debug" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1379262985" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder">
 								<outputEntries>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Release"/>
@@ -67,31 +66,13 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.251541726" name="Cross ARM GNU Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.1964008529" name="Use preprocessor" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.176450210" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="../../../Inc"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/STM32F4xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/BSP/STM32F429_EVAL_CUSTOMIZE"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="&quot;../../Startup/system/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../Startup/system/include/cmsis&quot;"/>
-									<listOptionValue builtIn="false" value="../../../Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../Config"/>
-									<listOptionValue builtIn="false" value="../../../../../../Utilities/CPU"/>
-									<listOptionValue builtIn="false" value="../../../../../../Drivers/BSP/Components"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../Drivers/BSP/Components/Common/&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STemWin/inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FatFs/src"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FatFs/src/drivers"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/LwIP/src/include"/>
-									<listOptionValue builtIn="false" value="../../../Data/Image"/>
-									<listOptionValue builtIn="false" value="../../../Data/Font"/>
-									<listOptionValue builtIn="false" value="../../../Data/Language"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.1597063119" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEBUG"/>
@@ -102,38 +83,19 @@
 									<listOptionValue builtIn="false" value="USE_HAL_DRIVER"/>
 									<listOptionValue builtIn="false" value="STM32F429xx"/>
 									<listOptionValue builtIn="false" value="HSE_VALUE=25000000"/>
-									<listOptionValue builtIn="false" value="USE_USB_HS"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.flags.1365288142" name="Assembler flags" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.flags" useByScannerDiscovery="false"/>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.807300573" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.17264031" name="Cross ARM C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.992675383" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../../../Inc"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/STM32F4xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/BSP/STM32F429_EVAL_CUSTOMIZE"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="&quot;../../Startup/system/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../Startup/system/include/cmsis&quot;"/>
-									<listOptionValue builtIn="false" value="../../../Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../Config"/>
-									<listOptionValue builtIn="false" value="../../../../../../Utilities/CPU"/>
-									<listOptionValue builtIn="false" value="../../../../../../Drivers/BSP/Components"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../Drivers/BSP/Components/Common/&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STemWin/inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FatFs/src"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FatFs/src/drivers"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/LwIP/src/include"/>
-									<listOptionValue builtIn="false" value="../../../Data/Image"/>
-									<listOptionValue builtIn="false" value="../../../Data/Font"/>
-									<listOptionValue builtIn="false" value="../../../Data/Language"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.warning.missingprototypes.26490027" name="Warn if a global function has no prototype (-Wmissing-prototypes)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.warning.missingprototypes" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.warning.strictprototypes.1944306527" name="Warn if a function has no arg type (-Wstrict-prototypes)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.warning.strictprototypes" useByScannerDiscovery="true" value="true" valueType="boolean"/>
@@ -147,37 +109,18 @@
 									<listOptionValue builtIn="false" value="USE_HAL_DRIVER"/>
 									<listOptionValue builtIn="false" value="STM32F429xx"/>
 									<listOptionValue builtIn="false" value="HSE_VALUE=25000000"/>
-									<listOptionValue builtIn="false" value="USE_USB_HS"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1411345749" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.696734846" name="Cross ARM C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1944535867" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../../../Inc"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/STM32F4xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/BSP/STM32F429_EVAL_CUSTOMIZE"/>
 									<listOptionValue builtIn="false" value="../../../../../../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="&quot;../../Startup/system/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../Startup/system/include/cmsis&quot;"/>
-									<listOptionValue builtIn="false" value="../../../Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../Config"/>
-									<listOptionValue builtIn="false" value="../../../../../../Utilities/CPU"/>
-									<listOptionValue builtIn="false" value="../../../../../../Drivers/BSP/Components"/>
-									<listOptionValue builtIn="false" value="&quot;../../../../../../Drivers/BSP/Components/Common/&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STemWin/inc"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FatFs/src"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FatFs/src/drivers"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/Third_Party/LwIP/src/include"/>
-									<listOptionValue builtIn="false" value="../../../Data/Image"/>
-									<listOptionValue builtIn="false" value="../../../Data/Font"/>
-									<listOptionValue builtIn="false" value="../../../Data/Language"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.noexceptions.1094872181" name="Do not use exceptions (-fno-exceptions)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.noexceptions" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.nortti.301447812" name="Do not use RTTI (-fno-rtti)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.nortti" useByScannerDiscovery="true" value="true" valueType="boolean"/>
@@ -198,7 +141,6 @@
 									<listOptionValue builtIn="false" value="USE_HAL_DRIVER"/>
 									<listOptionValue builtIn="false" value="STM32F429xx"/>
 									<listOptionValue builtIn="false" value="HSE_VALUE=25000000"/>
-									<listOptionValue builtIn="false" value="USE_USB_HS"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.1224501401" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input"/>
 							</tool>
@@ -223,7 +165,6 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.695995595" name="Remove unused sections (-Xlinker --gc-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.paths.937419013" name="Library search path (-L)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.paths" useByScannerDiscovery="false" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;../LinkerScript&quot;"/>
-									<listOptionValue builtIn="false" value="../../../../../../Middlewares/ST/STemWin/Lib"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.scriptfile.1267866396" name="Script files (-T)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.scriptfile" useByScannerDiscovery="false" valueType="stringList">
 									<listOptionValue builtIn="false" value="libs.ld"/>
@@ -232,9 +173,7 @@
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart.999061537" name="Do not use standard start files (-nostartfiles)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.usenewlibnano.376623172" name="Use newlib-nano (--specs=nano.specs)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.usenewlibnano" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.libs.1621224047" name="Libraries (-l)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.libs" useByScannerDiscovery="false" valueType="libs">
-									<listOptionValue builtIn="false" value=":STemWin528_CM4_OS_GCC.a"/>
-								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.libs.1621224047" name="Libraries (-l)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.libs" useByScannerDiscovery="false"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.otherobjs.1351653583" name="Other objects" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.otherobjs" useByScannerDiscovery="false"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nodeflibs.1033835098" name="Do not use default libraries (-nodefaultlibs)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nodeflibs" useByScannerDiscovery="false" value="false" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.useprintffloat.896574481" name="Use float with nano printf (-u _printf_float)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.useprintffloat" useByScannerDiscovery="false" value="false" valueType="boolean"/>
@@ -249,7 +188,7 @@
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.2008460504" name="Cross ARM GNU Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver"/>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.318314902" name="Cross ARM GNU Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash">
-								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice.1170259575" name="Output file format (-O)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice.ihex" valueType="enumerated"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice.1170259575" name="Output file format (-O)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice.srec" valueType="enumerated"/>
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.1686278012" name="Cross ARM GNU Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.1271753011" name="Display source (--source|-S)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" value="true" valueType="boolean"/>
@@ -263,84 +202,8 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.1625245641" name="stm324x9i_eval_camera.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_camera.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.1969749719" name="stm324x9i_eval_ts_ts3.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_ts_ts3.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.1115836634" name="stm324x9i_eval_ts.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_ts.h" toolsToInvoke="">
-						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.924065650" name="Resource Custom Build Step">
-							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.560858853" name="Resource Custom Build Step Input Type">
-								<additionalInput kind="additionalinputdependency" paths=""/>
-							</inputType>
-							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.998920478" name="Resource Custom Build Step Output Type"/>
-						</tool>
-					</fileInfo>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.25688092" name="stm324x9i_eval_audio.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_audio.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.485989082" name="stm324xg_eval_sd_revision.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324xg_eval_sd_revision.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.473550104" name="stm324x9i_eval_eeprom.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_eeprom.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.2090087988" name="stm324xg_eval_ts_revision.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324xg_eval_ts_revision.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.2126493442" name="stm324x9i_eval_revision.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_revision.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.1169445666" name="stm324x9i_eval_sdram.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_sdram.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.275680413" name="stm324x9i_eval_sd.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_sd.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.1070917938" name="stm324x9i_eval_sram.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_sram.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.1485852428" name="stm324x9i_eval_nor.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_nor.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.1039120002" name="stm324x9i_eval_io.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_io.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.1052971712" name="stm324x9i_eval_lcd.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_lcd.h" toolsToInvoke=""/>
-					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.682799775" name="stm324x9i_eval_ts_ad7846.h" rcbsApplicability="disable" resourcePath="Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_ts_ad7846.h" toolsToInvoke=""/>
-					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.300374411.161841976" name="/" resourcePath="Docs">
-						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug.804175150" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug" unusedChildren="">
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.25576042.1058645236" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.25576042"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.617786779.1984302750" name="Message length (-fmessage-length=0)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.617786779"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.1620667992.649240069" name="'char' is signed (-fsigned-char)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.1620667992"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1102145866.1329869466" name="Function sections (-ffunction-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1102145866"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.1999122957.695107970" name="Data sections (-fdata-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.1999122957"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.2127396541.1426664566" name="Debug level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.2127396541"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.1295879580.2079628945" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.1295879580"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.2093938158.272713622" name="ARM family" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.2093938158"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.92749009.970614446" name="Float ABI" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.92749009"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.440405203.441623739" name="Enable all common warnings (-Wall)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.440405203"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.extrawarn.1657401962.1009799270" name="Enable extra warnings (-Wextra)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.extrawarn.1657401962"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.unused.531915043.268391816" name="Warn on various unused elements (-Wunused)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.unused.531915043"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.uninitialized.888327553.1957168513" name="Warn on uninitialized variables (-Wuninitialised)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.uninitialized.888327553"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.missingdeclaration.1484469661.1794734733" name="Warn on undeclared global function (-Wmissing-declaration)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.missingdeclaration.1484469661"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.conversion.1741606769.1311257786" name="Warn on implicit conversions (-Wconversion)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.conversion.1741606769"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.pointerarith.197617751.1883446343" name="Warn if pointer arithmetic (-Wpointer-arith)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.pointerarith.197617751"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.padded.1908613707.1389739726" name="Warn if padding is included (-Wpadded)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.padded.1908613707"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.shadow.124073856.1267658357" name="Warn if shadowed variable (-Wshadow)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.shadow.124073856"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.logicalop.871343995.1197043861" name="Warn if suspicious logical ops (-Wlogical-op)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.logicalop.871343995"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.agreggatereturn.262392798.882544386" name="Warn if struct is returned (-Wagreggate-return)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.agreggatereturn.262392798"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.floatequal.1030320846.1517395251" name="Warn if floats are compared as equal (-Wfloat-equal)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.floatequal.1030320846"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.toerrors.488523628.1859146175" name="Generate errors instead of warnings (-Werror)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.toerrors.488523628"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nomoveloopinvariants.544633356.443481592" name="Disable loop invariant move (-fno-move-loop-invariants)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nomoveloopinvariants.544633356"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.359683172.1282405536" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.359683172"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.524973094.2009890879" name="Architecture" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.524973094"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.449935419.2098544275" name="Instruction set" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.449935419"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.770168084.303511636" name="Prefix" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.770168084"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.1902325487.1387749097" name="C compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.1902325487"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.1439521027.622201241" name="C++ compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.1439521027"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.1810485916.1897688220" name="Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.1810485916"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.1840442622.935248833" name="Hex/Bin converter" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.1840442622"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1003762652.1102790307" name="Listing generator" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1003762652"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.2102277444.303102239" name="Size command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.2102277444"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.615896799.402036161" name="Build command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.615896799"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.661391543.1990463077" name="Remove command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.661391543"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1187417251.1311238912" name="Create flash image" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1187417251"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.948969159.861758938" name="Print size" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.948969159"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.788419085.679004485" name="FPU Type" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.788419085"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id.1087638036.1793278532" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.id.1087638036"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.architecture.238912156.1989888503" name="Architecture" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.architecture.238912156"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.1211369097" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting"/>
-							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.2058686164" name="Cross ARM GNU Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.251541726"/>
-							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.895660711" name="Cross ARM C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.17264031"/>
-							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1502606587" name="Cross ARM C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.696734846"/>
-							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.796104336" name="Cross ARM C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.700467434"/>
-							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.812185015" name="Cross ARM C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.1925177974"/>
-							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1841351122" name="Cross ARM GNU Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.2008460504"/>
-							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.691097780" name="Cross ARM GNU Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.318314902"/>
-							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.1126708252" name="Cross ARM GNU Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.1686278012"/>
-							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1358777945" name="Cross ARM GNU Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.342044598"/>
-						</toolChain>
-					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Application/Data/Language/Tieng Viet|Application/Modules/filebrowser/filebrowser_res.c|Application/Core/Src/k_res.c|Drivers/BSP/Component/io.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_sdram.h|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_io.h|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_smartcard.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_lcd.h|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324xg_eval_sd_revision.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_sd.h|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_audio.h|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_irda.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324xg_eval_ts_revision.h|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_lcd_revision.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_sram.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_revision.h|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_nor.h|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_sd.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_ts_ts3.c|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_qspi.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_eeprom.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_ts.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_ts_ad7846.h|STM32F429_EVAL_App1/Core/Src/k_res.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324xg_eval_sd_revision.h|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_ts.h|newlib/src/newlib/_sbrk.c|STM32F429_EVAL_App1/Data/Language/Tieng Viet|STM32F429_EVAL_App1/GNU-Esclipse/startup_stm32f429xx.S|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spdifrx.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_audio.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_sram.h|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_io.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_revision.c|STM32F429_EVAL_App1/Modules/filebrowser/filebrowser_res.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_nor.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_camera.h|newlib|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_ts_ts3.h|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_eeprom.h|startup_stm32f407xx.S|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_ts_ad7846.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_camera.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324xg_eval_ts_revision.c|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_sdram.c|newlib/src/newlib/_startup.c|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_timebase_tim_template.c|Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pccard.c|Drivers/BSP/STM32F429_EVAL_CUSTOMIZE/stm324x9i_eval_lcd.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="newlib|newlib/src/newlib/_startup.c|newlib/src/newlib/_sbrk.c|startup_stm32f407xx.S" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -563,7 +426,9 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
-		<configuration configurationName="Debug"/>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/STM32F4-Discovery_"/>
+		</configuration>
 		<configuration configurationName="Release">
 			<resource resourceType="PROJECT" workspacePath="/STM32F4-Discovery_"/>
 		</configuration>
