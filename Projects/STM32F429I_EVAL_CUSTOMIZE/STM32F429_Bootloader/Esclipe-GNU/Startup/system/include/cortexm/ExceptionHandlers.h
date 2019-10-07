@@ -89,6 +89,7 @@ extern "C"
 }
 #endif
 
+extern unsigned char SIZE_VECTORTABLE(void);
 // ----------------------------------------------------------------------------
 
 #endif // CORTEXM_EXCEPTION_HANDLERS_H_

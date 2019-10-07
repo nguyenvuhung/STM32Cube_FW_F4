@@ -86,6 +86,11 @@
 			<locationURI>copy_PARENT1/Src/main.c</locationURI>
 		</link>
 		<link>
+			<name>Bootloader/User/stm32f4xx_hal_msp.c</name>
+			<type>1</type>
+			<locationURI>copy_PARENT1/Src/stm32f4xx_hal_msp.c</locationURI>
+		</link>
+		<link>
 			<name>Bootloader/User/stm32f4xx_it.c</name>
 			<type>1</type>
 			<locationURI>copy_PARENT1/Src/stm32f4xx_it.c</locationURI>
@@ -169,6 +174,16 @@
 			<name>Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_spi.c</name>
 			<type>1</type>
 			<locationURI>copy_PARENT12/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_tim.c</name>
+			<type>1</type>
+			<locationURI>copy_PARENT12/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_tim_ex.c</name>
+			<type>1</type>
+			<locationURI>copy_PARENT12/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_uart.c</name>

@@ -3,11 +3,11 @@
   
   @verbatim
   ******************** (C) COPYRIGHT 2016 STMicroelectronics *******************
-  * @file    GPIO/GPIO_EXTI/readme.txt 
+  * @file    STM32F429_Bootloader/readme.txt 
   * @author  MCD Application Team
   * @version V1.2.5
-  * @date    29-January-2016
-  * @brief   Description of the GPIO EXTI example.
+  * @date    05-October-2019
+  * @brief   Description of the Bootloader example.
   ******************************************************************************
   *
   * Redistribution and use in source and binary forms, with or without modification,
@@ -37,19 +37,31 @@
 
 @par Example Description 
 
-This example shows how to configure external interrupt lines.
-In this example, 1 EXTI lines (EXTI Line0) is configured  to generate
-an interrupt on each rising and falling edge, respectively. 
-In the interrupt routine a LED connected to a specific GPIO pin is toggled.
+This example shows how to the simple bootloader work.
+Bootloader feature:
+- Bootloader run at 0x8000000 in Flash
+- Receive the binary of application via UART and load it into SDRAM memory address 0xC0000000
+- Jump to the image's entry point and excute the application
+Memory map for bootloader and application
+Bootloader start in Flash memory at address 0x8000000
+Application start in SDRAM memory at address 0xC0000000
+------------------------------   0x08000000   --                                        0xC0000000
+-                                            --                                        
+-                                            --                                       
+-       bootloader                           --           Application                  
+-                                            --                                       
+-                                0x081FFFFF   --                                        0xC0C00000
 
+   Flash memory                                         SDRAM memory
 In this example:
     - EXTI Line0 is connected to PA0 pin
-    - when falling edge is detected on EXTI Line0, LED3, LED4, LED5 and LED6 toggles
+    - ...
 
-On STM32F4-Discovery  board:
+On STM32F429-EVAL  board:
     - EXTI Line0 is connected to User and Wake-Up push-button
+    -  
   
-In this example, HCLK is configured at 168 MHz.
+In this example, HCLK is configured at 180 MHz.
 
 
 @note Care must be taken when using HAL_Delay(), this function provides accurate delay (in milliseconds)
@@ -74,8 +86,8 @@ In this example, HCLK is configured at 168 MHz.
 
 @par Hardware and Software environment  
 
-  - This example runs on STM32F407xx devices.    
-  - This example has been tested with STMicroelectronics STM32F4-Discovery RevB & RevC 
+  - This example runs on STM32F429xx devices.    
+  - This example has been tested with STMicroelectronics STM32F429-EVAL Customize itself 
     boards and can be easily tailored to any other supported device 
     and development board.
 

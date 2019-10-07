@@ -48,11 +48,17 @@
 /** @addtogroup GPIO_EXTI
   * @{
   */
+  
+  /** @addtogroup TIM_TimeBase
+  * @{
+  */
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
+extern TIM_HandleTypeDef    TimHandle;
+
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
@@ -173,6 +179,16 @@ void SysTick_Handler(void)
 void EXTI0_IRQHandler(void)
 {
   HAL_GPIO_EXTI_IRQHandler(WAKEUP_BUTTON_PIN);
+}
+
+/**
+  * @brief  This function handles TIM interrupt request.
+  * @param  None
+  * @retval None
+  */
+void TIMx_IRQHandler(void)
+{
+  HAL_TIM_IRQHandler(&TimHandle);
 }
 
 /**

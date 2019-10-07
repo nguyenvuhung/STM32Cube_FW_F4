@@ -380,5 +380,9 @@ while (1)
   {
   }
 }
+unsigned char SIZE_VECTORTABLE(void)
+{
+  return (sizeof(__isr_vectors)/sizeof(__isr_vectors[0]));
+}
 
 // ----------------------------------------------------------------------------

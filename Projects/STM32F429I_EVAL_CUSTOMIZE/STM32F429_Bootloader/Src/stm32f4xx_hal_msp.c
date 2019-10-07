@@ -1,10 +1,10 @@
 /**
   ******************************************************************************
-  * @file    GPIO/GPIO_EXTI/Inc/stm32f4xx_it.h 
+  * @file    TIM/TIM_TimeBase/Src/stm32f4xx_hal_msp.c
   * @author  MCD Application Team
   * @version V1.2.5
   * @date    29-January-2016 
-  * @brief   This file contains the headers of the interrupt handlers.
+  * @brief   HAL MSP module.    
   ******************************************************************************
   * @attention
   *
@@ -32,40 +32,64 @@
   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   *
-  ******************************************************************************
-  */
-
-/* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32F4xx_IT_H
-#define __STM32F4xx_IT_H
-
-#ifdef __cplusplus
- extern "C" {
-#endif 
+  ******************************************************************************  
+  */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-/* Exported types ------------------------------------------------------------*/
-/* Exported constants --------------------------------------------------------*/
-/* Exported macro ------------------------------------------------------------*/
-/* Exported functions ------------------------------------------------------- */
+/** @addtogroup STM32F4xx_HAL_Examples
+  * @{
+  */
 
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-void SVC_Handler(void);
-void DebugMon_Handler(void);
-void PendSV_Handler(void);
-void SysTick_Handler(void);
-void EXTI0_IRQHandler(void);
-void TIMx_IRQHandler(void);
-#ifdef __cplusplus
+/** @defgroup HAL_MSP
+  * @brief HAL MSP module.
+  * @{
+  */
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
+
+/** @defgroup HAL_MSP_Private_Functions
+  * @{
+  */
+
+/**
+  * @brief TIM MSP Initialization 
+  *        This function configures the hardware resources used in this example: 
+  *           - Peripheral's clock enable
+  *           - Peripheral's GPIO Configuration  
+  * @param htim: TIM handle pointer
+  * @retval None
+  */
+void HAL_TIM_Base_MspInit(TIM_HandleTypeDef *htim)
+{
+  /*##-1- Enable peripherals and GPIO Clocks #################################*/
+  /* TIMx Peripheral clock enable */
+  TIMx_CLK_ENABLE();
+
+  /*##-2- Configure the NVIC for TIMx ########################################*/
+  /* Set the TIMx priority */
+  HAL_NVIC_SetPriority(TIMx_IRQn, 0, 1);
+  
+  /* Enable the TIMx global Interrupt */
+  HAL_NVIC_EnableIRQ(TIMx_IRQn);
 }
-#endif
 
-#endif /* __STM32F4xx_IT_H */
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
